@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chia Song｜天然水晶手鍊</title>
+<meta name="description" content="Chia Song 天然水晶手鍊，探索專屬於你的晶石之美。">
+<style>
+:root{
+  --cream:#fbf7ef; --ivory:#fffdf8; --gold:#b9965a; --gold2:#d8bd87;
+  --brown:#5d5144; --dark:#332e28; --line:#e9dfcf; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Serif TC","PingFang TC","Microsoft JhengHei",serial,serif;color:var(--dark);background:var(--cream);line-height:1.7}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,253,248,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(185,150,90,.15)}
+.nav-inner{max-width:1200px;margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.logo{letter-spacing:5px;font-size:22px;color:var(--dark);font-weight:600}
+.logo small{display:block;font-family:Arial,sans-serif;font-size:8px;letter-spacing:4px;color:var(--gold);text-align:center;margin-top:-4px}
+.links{display:flex;gap:30px;font-size:14px;color:var(--brown)}
+.links a:hover{color:var(--gold)}
+.cart-btn{border:1px solid var(--gold);background:transparent;color:var(--brown);padding:8px 15px;border-radius:30px}
+.badge{display:inline-flex;min-width:20px;height:20px;border-radius:50%;align-items:center;justify-content:center;background:var(--gold);color:white;font:12px Arial;margin-left:5px}
+.hero{min-height:760px;padding:150px 7% 90px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;background:linear-gradient(115deg,#fffdf8 0%,#f7efe2 100%)}
+.hero-copy{max-width:590px}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:4px;color:var(--gold);margin-bottom:20px}
+h1{font-size:clamp(42px,5.4vw,76px);font-weight:500;line-height:1.2;letter-spacing:4px;margin-bottom:25px}
+.hero p{font-size:17px;color:#776c60;margin-bottom:35px}
+.btn{display:inline-block;background:var(--dark);color:#fff;padding:13px 30px;border-radius:2px;letter-spacing:2px;border:0}
+.btn:hover{background:var(--gold)}
+.hero-art{height:540px;border-radius:260px 260px 10px 10px;position:relative;overflow:hidden;background:
+radial-gradient(circle at 50% 43%,rgba(255,255,255,.95) 0 8%,transparent 9%),
+radial-gradient(circle at 50% 50%,rgba(185,150,90,.25) 0 20%,transparent 21%),
+linear-gradient(145deg,#eadcc7,#fffaf1 45%,#d7c5a9)}
+.hero-art:after{content:"";position:absolute;width:330px;height:330px;border:2px solid rgba(185,150,90,.55);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 60px rgba(185,150,90,.2)}
+.floating{position:absolute;bottom:35px;left:35px;background:rgba(255,253,248,.9);padding:15px 20px;border-left:2px solid var(--gold);z-index:2;font-size:13px}
+.section{max-width:1200px;margin:auto;padding:100px 24px}
+.section-head{text-align:center;margin-bottom:45px}
+.section-head h2{font-size:34px;font-weight:500;letter-spacing:3px}
+.section-head p{color:#8b8175;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--ivory);border:1px solid var(--line);transition:.35s;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(90,70,45,.09)}
+.product-img{height:270px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(145deg,#f2e9dc,#fffdf8)}
+.bracelet{width:145px;height:145px;border-radius:50%;border:25px dotted #b89b72;filter:drop-shadow(0 10px 10px rgba(80,60,40,.15))}
+.p2{border-color:#91a7ae}.p3{border-color:#4f5964}.p4{border-color:#caa66a}
+.card-body{padding:20px}
+.card h3{font-size:18px;font-weight:500}
+.card p{font-size:13px;color:#8a8074;margin:4px 0 12px}
+.price{font-family:Arial,sans-serif;color:var(--gold);font-size:17px}
+.add{float:right;border:1px solid var(--gold);background:transparent;padding:6px 12px;color:var(--brown);font-size:12px}
+.story{background:#f1e7d8}
+.story-inner{max-width:1000px;margin:auto;padding:90px 24px;text-align:center}
+.story h2{font-size:34px;font-weight:500;letter-spacing:4px;margin-bottom:20px}
+.story p{max-width:720px;margin:auto;color:#776c60}
+.categories{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cat{padding:13px 25px;border:1px solid var(--gold2);background:var(--ivory);border-radius:40px;color:var(--brown)}
+.newsletter{background:var(--dark);color:#fff;text-align:center;padding:75px 20px}
+.newsletter p{color:#cfc4b5;margin:10px 0 25px}
+.input{padding:13px 16px;border:0;width:min(330px,70%);margin-right:6px}
+footer{background:#28241f;color:#bdb2a3;text-align:center;padding:35px 20px;font-size:12px;letter-spacing:1px}
+.cart-panel{position:fixed;right:-420px;top:0;width:min(400px,92vw);height:100vh;background:#fffdf8;z-index:50;box-shadow:-10px 0 35px rgba(0,0,0,.15);transition:.35s;padding:30px;display:flex;flex-direction:column}
+.cart-panel.open{right:0}
+.cart-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}
+.close{border:0;background:none;font-size:25px}
+.cart-items{flex:1;overflow:auto;padding:20px 0}
+.cart-item{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:14px 0;font-size:14px}
+.qty button{border:1px solid var(--line);background:white;width:25px;height:25px}
+.total{border-top:1px solid var(--line);padding-top:18px;font-size:20px;display:flex;justify-content:space-between}
+.checkout{width:100%;margin-top:15px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.25);z-index:40;display:none}
+.overlay.show{display:block}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){
+ .links{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:130px}
+ .hero-art{height:400px}.grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+ .grid{grid-template-columns:1fr 1fr;gap:10px}.product-img{height:190px}.bracelet{width:100px;height:100px;border-width:18px}
+ .card-body{padding:13px}.card h3{font-size:15px}.add{float:none;margin-top:10px;width:100%}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#">CHIA SONG<small>CRYSTAL JEWELRY</small></a>
+    <nav class="links"><a href="#products">精選商品</a><a href="#categories">水晶分類</a><a href="#story">品牌故事</a></nav>
+    <button class="cart-btn" onclick="toggleCart()">購物袋 <span id="cartCount" class="badge">0</span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="eyebrow">NATURAL CRYSTAL · CHIA SONG</div>
+    <h1>把自然的光<br>戴在手腕上</h1>
+    <p>精選天然晶石，以細緻珠串打造專屬於你的日常風格。讓每一顆晶石，成為生活中的一份美好寓意。</p>
+    <a class="btn" href="#products">探索晶石系列</a>
+  </div>
+  <div class="hero-art reveal"><div class="floating">天然晶石 · 手工串製</div></div>
+</section>
+
+<section id="products" class="section">
+  <div class="section-head reveal"><div class="eyebrow">CURATED COLLECTION</div><h2>精選手鍊</h2><p>溫柔色調，襯托每一種日常風格</p></div>
+  <div class="grid">
+    <article class="card reveal"><div class="product-img"><div class="bracelet"></div></div><div class="card-body"><h3>晨曦黃金晶</h3><p>黃水晶 · 天然晶石</p><span class="price">NT$ 1,880</span><button class="add" onclick="addToCart('晨曦黃金晶',1880)">加入購物袋</button></div></article>
+    <article class="card reveal"><div class="product-img"><div class="bracelet p2"></div></div><div class="card-body"><h3>海藍之境</h3><p>海藍寶 · 天然晶石</p><span class="price">NT$ 2,380</span><button class="add" onclick="addToCart('海藍之境',2380)">加入購物袋</button></div></article>
+    <article class="card reveal"><div class="product-img"><div class="bracelet p3"></div></div><div class="card-body"><h3>深海夜語</h3><p>深色晶石 · 天然晶石</p><span class="price">NT$ 1,980</span><button class="add" onclick="addToCart('深海夜語',1980)">加入購物袋</button></div></article>
+    <article class="card reveal"><div class="product-img"><div class="bracelet p4"></div></div><div class="card-body"><h3>琥珀暖陽</h3><p>虎眼石 · 天然晶石</p><span class="price">NT$ 1,680</span><button class="add" onclick="addToCart('琥珀暖陽',1680)">加入購物袋</button></div></article>
+  </div>
+</section>
+
+<section id="categories" class="section">
+ <div class="section-head reveal"><div class="eyebrow">FIND YOUR CRYSTAL</div><h2>探索你的晶石</h2></div>
+ <div class="categories reveal"><a class="cat" href="#products">招財寓意</a><a class="cat" href="#products">守護寓意</a><a class="cat" href="#products">愛情寓意</a><a class="cat" href="#products">事業寓意</a><a class="cat" href="#products">平靜療癒</a></div>
+</section>
+
+<section id="story" class="story">
+ <div class="story-inner reveal"><div class="eyebrow">OUR STORY</div><h2>讓晶石，陪你走過每一天</h2><p>Chia Song 將天然晶石的自然色澤與現代珠串美學結合，挑選每一顆獨具特色的礦石，細心搭配成適合日常佩戴的手鍊。每一件作品，都希望成為你送給自己的一份溫柔心意。</p></div>
+</section>
+
+<section class="newsletter">
+ <div class="eyebrow">STAY CONNECTED</div><h2>訂閱 Chia Song 最新消息</h2><p>新品、限定系列與品牌故事，第一時間與你分享。</p>
+ <input class="input" type="email" placeholder="輸入 Email"><button class="btn" onclick="alert('謝謝你的訂閱！')">訂閱</button>
+</section>
+</main>
+
+<footer>© 2026 CHIA SONG CRYSTAL JEWELRY · 天然水晶手鍊</footer>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<aside class="cart-panel" id="cart">
+ <div class="cart-top"><h2>購物袋</h2><button class="close" onclick="toggleCart()">×</button></div>
+ <div class="cart-items" id="cartItems"><p style="color:#999;text-align:center;margin-top:40px">購物袋目前是空的</p></div>
+ <div class="total"><span>總計</span><strong id="total">NT$ 0</strong></div>
+ <button class="btn checkout" onclick="checkout()">前往結帳</button>
+</aside>
+
+<script>
+let cart=[];
+function addToCart(name,price){
+ const item=cart.find(x=>x.name===name);
+ if(item)item.qty++;else cart.push({name,price,qty:1});
+ renderCart(); document.getElementById('cart').classList.add('open');document.getElementById('overlay').classList.add('show');
+}
+function changeQty(name,delta){
+ const item=cart.find(x=>x.name===name); if(!item)return;
+ item.qty+=delta;if(item.qty<=0)cart=cart.filter(x=>x.name!==name);renderCart();
+}
+function renderCart(){
+ const box=document.getElementById('cartItems');
+ let count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+ document.getElementById('cartCount').textContent=count;document.getElementById('total').textContent='NT$ '+total.toLocaleString();
+ box.innerHTML=cart.length?cart.map(x=>`<div class="cart-item"><div><strong>${x.name}</strong><br><span>NT$ ${x.price.toLocaleString()}</span></div><div class="qty"><button onclick="changeQty('${x.name}',-1)">−</button> ${x.qty} <button onclick="changeQty('${x.name}',1)">＋</button></div></div>`).join(''):'<p style="color:#999;text-align:center;margin-top:40px">購物袋目前是空的</p>';
+}
+function toggleCart(){document.getElementById('cart').classList.toggle('open');document.getElementById('overlay').classList.toggle('show')}
+function checkout(){
+ if(!cart.length){alert('請先加入商品');return}
+ alert('這是目前的展示版結帳功能。下一階段可以接上真正的訂單、金流與物流系統。');
+}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
